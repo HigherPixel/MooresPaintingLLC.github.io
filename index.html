@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family: "Lato", sans-serif;
+background-color: black;
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+   
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    background-color: white;
+    background-image: url("Pictures/TransparentLogo.png");
+    
+    color: black;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+.slideshow-container
+{
+    text-align: center;
+}
+
+.content-panel{
+  overflow: auto; /* keep the float contained within this panel */
+  border: 1px dotted blue;
+}
+.thumb-panel {
+  float: left;
+  width: 100px;
+  border: 1px solid gray;
+  text-align: center;
+  margin-right: 20px; /* for example */
+}
+.thumb-panel img {
+  display: inline-block;
+  margin-bottom: 20px; /* for example */
+}
+.thumb-panel button{
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.text-panel {
+  overflow: auto; /* prevents text flow wrapping around floated panel */
+  border: 1px solid gray;
+
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.column img {
+    margin-top: 12px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+footer{
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<img id ="CenterImage" src="Pictures/Logo.png" alt="Home Logo" style="margin:auto; width:304px;height:228px;">
+<img id ="CenterImage" src="Pictures/Collage.png" alt="Home Logo" style="margin:auto; width:700px;height:228px;">
+<img id ="CenterImage" src="Pictures/Collage1.png" alt="Home Logo" style="margin:auto; width:700px;height:228px;">
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Home')" id="open">Home</button>
+  <button class="tablinks" onclick="openCity(event, 'Interior Painting')" id="open">Interior Painting</button>
+  <button class="tablinks" onclick="openCity(event, 'Wood Work')">Wood Work</button>
+   <button class="tablinks" onclick="openCity(event, 'Exterior Painting')" id="open">Exterior Painting</button>
+  <button class="tablinks" onclick="openCity(event, 'Home Remodel')">Home Remodel</button>
+   
+  <button class="tablinks"   onclick="openCity(event, 'Industial Painting')">Industial Painting</button>
+  <button class="tablinks" onclick="openCity(event, 'Sheet Rock')">Sheet Rock</button>
+  <button class="tablinks" onclick="openCity(event, 'Handy Man')">Handy Man</button>
+  <button class="tablinks" onclick="openCity(event, 'Industial Painting')">Industial Painting</button>
+  <button class="tablinks" onclick="openCity(event, 'Bath Room')">Bath Room</button>
+  <button class="tablinks" onclick="openCity(event, 'Industial Painting')">Industial Painting</button>
+  <button class="tablinks" onclick="openCity(event, 'Flooring')">Flooring</button>
+  <button class="tablinks" onclick="openCity(event, 'Kitchen')">Kitchen</button>
+  <button class="tablinks" onclick="openCity(event, 'Lawn Care')">Lawn Care</button>
+
+  
+</div>
+
+
+<div id="Home" class="tabcontent">
+  <h3>Mission Statement</h3>
+  <p style="font-size:160%;">Moore's Painting LLC is a residential and commercial painting company whose owner has been serving Northeast and Northwest Louisiana for the past four years, Located in Ruston, La.</p>
+  <br />
+  <p style="font-size:160%;">The owner, Nicholas Moore, has 15 years of experience. We are licensed, insured, and registered with the Secretary of State. We look forward to serving your home and business needs. We strive to provide service of excellence!</p>
+
+  
+
+  <!-- <input type="image" class="tablinks" src="Pictures/After1.jpg"style="width: 200px; height: 200px;" onclick="openCity(event, 'Wood Work')"
+  >
+  <input type="image" class="tablinks" src="Pictures/After2.jpg"style="width: 200px; height: 200px;" onclick="openCity(event, 'Past Work')"
+  >
+  <input type="image" class="tablinks" src="Pictures/After9.jpg"style="width: 200px; height: 200px;" onclick="openCity(event, 'Past Work')"
+  >
+  <input type="image" class="tablinks" src="Pictures/After6.jpg"style="width: 200px; height: 200px;" onclick="openCity(event, 'Past Work')"
+  >
+
+  <input type="image" class="tablinks" src="Pictures/After9.jpg"style="width: 200px; height: 200px;" onclick="openCity(event, 'Past Work')"
+  >
+  <input type="image" class="tablinks" src="Pictures/After9.jpg"style="width: 200px; height: 200px;" onclick="openCity(event, 'Past Work')"
+  >
+
+
+  <input type="image" class="tablinks" src="Pictures/After7.jpg" style="width: 200px; height: 200px;" onclick="openCity(event, 'Past Work')">
+<br/> -->
+  <div class="CenterImage"  style="max-width:1000px; margin: auto;"> 
+
+  <img class="mySlides" src="bathroom\198.jpg" style="margin:0 auto;width:400px;
+	height:400px;" >
+  <img class="mySlides" src="Pictures/After2.jpg" style="margin:0 auto;width:400px;
+	height:400px;"  >
+  <img class="mySlides" src="kicthen/127.jpg" style="margin:0 auto;width:400px;
+	height:400px;" >
+  <img class="mySlides" src="flooring/tile/42.jpg" style="margin:0 auto;width:400px;
+	height:400px;"  >
+  <img class="mySlides" src="industrual/342.jpg" style="margin:0 auto;width:400px;
+	height:400px;"  >
+  <img class="mySlides" src="Pictures/After6.jpg" style="margin:0 auto;width:400px;
+	height:400px;"  >
+  <img class="mySlides" src="flooring/Banboo/134.jpg" style="margin:0 auto;width:400px;
+	height:400px;"  >
+  <img class="mySlides" src="flooring/LvT/20160702_172451.jpg" style="margin:0 auto;width:400px;
+	height:400px;"  >
+  <img class="mySlides" src="InterPainting/280.jpg" style="margin:0 auto;width:400px;
+	height:400px;" >
+  <p style="font-size:160%; text-align: center;"> Here is a look at some of our work!</p>
+</div>
+  
+
+  </div>
+
+<!--
+<div id="Wood Work" class="tabcontent">
+  <h3>Mission Statement</h3>
+  <p style="font-size:160%;"> These jobs are for Wood Working</p>
+  <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+  left: 50%;">
+  <img  src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+  <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+  
+  </div>
+
+  <div id="Exterior Painting" class="tabcontent">
+  <h3>Mission Statement</h3>
+  <p style="font-size:160%; text-align:center;"> Here is a look at our work on Exterior Painting</p>
+  <div>
+  <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+  left: 50%;">
+  <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+  <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+  </div>
+  </div>
+
+  <div id="Interior Painting" class="tabcontent">
+  <h3>Mission Statement</h3>
+  <p style="font-size:160%;"> These jobs are for Interior Painting</p>
+  <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+  left: 50%;">
+  <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+  <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+  
+  </div>
+
+  <div id="Home Remodel" class="tabcontent">
+    <h3>Mission Statement</h3>
+    <p style="font-size:160%;"> These jobs are for Home Remodel</p>
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+    left: 50%;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+    
+    </div>
+
+    <div id="Industial Painting" class="tabcontent">
+    <h3>Mission Statement</h3>
+    <p style="font-size:160%;"> These jobs are for Industial Painting</p>
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+    left: 50%;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+    
+    </div>
+  <div id="Bath Room" class="tabcontent">
+    <h3>Mission Statement</h3>
+    <p style="font-size:160%;"> These jobs are for Bath Room</p>
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+    left: 50%;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+    
+    </div>
+  <div id="Flooring" class="tabcontent">
+    <h3>Mission Statement</h3>
+    <p style="font-size:160%;"> These jobs are for Flooring</p>
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+    left: 50%;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+    
+    </div>
+  <div id="Kitchen" class="tabcontent">
+    <h3>Mission Statement</h3>
+    <p style="font-size:160%;"> These jobs are for Kitchen</p>
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+    left: 50%;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+    
+    </div>
+    <div id="Sheet Rock" class="tabcontent">
+    <h3>Mission Statement</h3>
+    <p style="font-size:160%;"> These jobs are for Sheet Rock</p>
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+    left: 50%;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+    
+    </div>
+
+    </div>
+    <div id="Lawn Care" class="tabcontent">
+    <h3>Mission Statement</h3>
+    <p style="font-size:160%;"> These jobs are for Lawn Care</p>
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+    left: 50%;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+    
+    </div>
+
+    <div id="Handy Man" class="tabcontent">
+    <h3>Mission Statement</h3>
+    <p style="font-size:160%;"> These jobs are for Handy Man</p>
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-0/c0.51.200.200/p200x200/19748359_353924705025734_1175760848479934446_n.jpg?oh=08b1c9ddeda545f3a58d56c7b012b587&oe=59F04E00" alt="Mountain View" style="width:304px;height:228px; top: 50%;
+    left: 50%;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/19748364_353924658359072_1339594243044428667_n.jpg?oh=1a7ebfd3298607c5fff5b77195113bdf&oe=59FD64E1" alt="Mountain View" style="width:304px;height:228px;">
+    <img src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/16115037_274174993000706_2910686431724732865_n.jpg?oh=1eef262dcd45ed418cd44edd2a36a126&oe=5A388FC3" alt="Mountain View" style="width:304px;height:228px;">
+    
+    </div>
+  -->
+    
+    <footer>
+        <p>Posted by: Nick Moore</p>
+        <p>Contact information: <a href="mailto:moorespaintingllc1@yahoo.com">
+        moorespaintingllc1@yahoo.com</a>.</p>
+        <p>Phone Number: 225-303-4903</p>
+      </footer>
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+document.getElementById("open").click();
+</script>
+
+<!-- <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}-->
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    /*x[myIndex-1].style.align = "center";*/
+
+    setTimeout(carousel, 4000); // Change image every 2 seconds
+}
+
+
+</script> 
+     
+</body>
+ 
+</html> 
+
